@@ -7,11 +7,7 @@ const app =  express();
 
 app.use(express.json());
 app.use('/sabius', rota);
-app.use(
-  cors({
-    origin: 'http://localhost:3000',
-  })
-);
+app.use(cors());
 app.listen(process.env.PORT || 8081, ()=>{
     try {
         console.log("Api started");
