@@ -1,9 +1,10 @@
 import express from "express";
+import cors from 'cors';
 import { sabiusModel } from "../model/modelSab.js";
 
 const rota = express.Router();
 
-rota.get("/periodoSab", async (req, res) => {
+rota.get("/periodoSab", cors() ,async (req, res) => {
   const { inicial, final } = req.query;
   const periodoInicial = new Date(inicial);
   const periodoFinal = new Date(final);
