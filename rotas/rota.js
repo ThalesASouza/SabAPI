@@ -1,9 +1,6 @@
 import express from "express";
 import { sabiusModel } from "../model/modelSab.js";
 
-
-global.Promise = bluebird;
-
 const rota = express.Router();
 
 rota.get("/periodoSab", async (req, res) => {
